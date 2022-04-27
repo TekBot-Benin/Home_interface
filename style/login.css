@@ -7,7 +7,7 @@
 .full-page {
     height: 100%;
     width: 100%;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(image.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/image.jpg);
     background-position: center;
     background-size: cover;
     position: absolute;
@@ -58,19 +58,26 @@ nav ul li button {
 
 nav ul li button:hover {
     font-weight: bold;
-    color: rgb(121, 74, 13);
+    padding: 8px 8px;
+    color: black;
+    border-radius: 10px;
+    background-color: #b37b3b;
     transition: all 0.4s ease;
 }
 
 nav ul li a:hover {
     font-weight: bold;
-    color: rgb(121, 74, 13);
+    padding: 8px 8px;
+    color: black;
+    border-radius: 10px;
+    background-color: #b37b3b;;
     transition: all 0.4s ease;
 }
 
 a {
     text-decoration: none;
-    color: rgb(8, 0, 3);
+    font-weight: bold;
+    color: #fcfcfb;
     font-size: 28px;
 }
 
@@ -83,7 +90,7 @@ a {
     height: 480px;
     position: relative;
     margin: 2% auto;
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.7);
     padding: 10px;
     overflow: hidden;
 }
@@ -99,6 +106,7 @@ a {
 .toggle-btn {
     padding: 10px 30px;
     cursor: pointer;
+    color: rgb(206, 204, 204);
     background: transparent;
     border: 0;
     outline: none;
@@ -111,7 +119,7 @@ a {
     position: absolute;
     width: 110px;
     height: 100%;
-    background: #F3C693;
+    background: #b37b3b;
     border-radius: 30px;
     transition: .5s;
 }
@@ -148,10 +156,14 @@ a {
     cursor: pointer;
     display: block;
     margin: auto;
-    background: #F3C693;
+    background: #b37b3b;
     border: 0;
     outline: none;
     border-radius: 30px;
+}
+
+.submit-btn:hover {
+    background: #b49067;
 }
 
 .check-box {
