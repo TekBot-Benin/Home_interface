@@ -92,6 +92,7 @@ a {
 .wrapper {
     margin: 50px;
     display: flex;
+    flex-wrap: wrap;
 }
 
 .progress {
@@ -107,11 +108,16 @@ a {
 .box_bath,
 .box_cuisine,
 .box_salon,
+.box_enter,
+.box_garage,
+.box_small_salon,
+.box_extern,
 .box_chambre
 {
-    width: 300px;
-    height: 200px;
-    background: rgba(148, 123, 84, 0.7);
+    text-align: center;
+    width: 150px;
+    height: 150px;
+    background: rgba(86, 153, 184, 0.7);
     border-radius: 1em;
     box-shadow: -5px 8px 19px -1px rgba(0, 0, 0, 0.57);
     margin: 70px;
@@ -120,8 +126,12 @@ a {
 .toggle-btn,
 .toggle-btn1,
 .toggle-btn2,
-.toggle-btn3 {
-    width: 60px;
+.toggle-btn3,
+.toggle-btn4,
+.toggle-btn5,
+.toggle-btn6,
+.toggle-btn7 {
+    width: 40px;
     height: 20px;
     background: gray;
     border-radius: 30px;
@@ -131,7 +141,11 @@ a {
 .toggle-btn>.inner-circle,
 .toggle-btn1>.inner-circle,
 .toggle-btn2>.inner-circle,
-.toggle-btn3>.inner-circle {
+.toggle-btn3>.inner-circle,
+.toggle-btn4>.inner-circle,
+.toggle-btn5>.inner-circle,
+.toggle-btn6>.inner-circle,
+.toggle-btn7>.inner-circle {
     width: 20px;
     height: 20px;
     background: #fff;
@@ -160,7 +174,7 @@ a {
     transition-delay: 0.5s;
 }
 
-.toggle-btn3.active {
+.toggle-btn3.active, .toggle-btn4.active, .toggle-btn5.active, .toggle-btn6.active, .toggle-btn7.active {
     background: white;
     box-shadow: 0 0 10px white, 0 0 40px white, 0 0 80px white;
     transition-delay: 0.5s;
@@ -169,11 +183,16 @@ a {
 .toggle-btn.active>.inner-circle,
 .toggle-btn1.active>.inner-circle,
 .toggle-btn2.active>.inner-circle,
-.toggle-btn3.active>.inner-circle {
-    margin-left: 40px;
+.toggle-btn3.active>.inner-circle,
+.toggle-btn4.active>.inner-circle,
+.toggle-btn5.active>.inner-circle,
+.toggle-btn6.active>.inner-circle,
+.toggle-btn7.active>.inner-circle {
+    margin-left: 20px;
 }
 
 .icon1 {
     color: rgb(0, 0, 0);
     margin: 10px auto;
 }
+

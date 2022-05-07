@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu', sans-serif;
+    box-sizing: border-box;
+}
+
+.full-page {
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url(../images/image.jpg);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    padding-left: 50px;
+    padding-right: 30px;
+    padding-top: 50px;
+}
+
+nav {
+    flex: 1;
+    text-align: right;
+}
+
+nav ul {
+    display: inline-block;
+    list-style: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 70px;
+}
+
+nav ul li a {
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+}
+
+nav ul li button {
+    font-size: 20px;
+    color: white;
+    outline: none;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+nav ul li button:hover {
+    font-weight: bold;
+    color: black;
+    border-radius: 10px;
+    transition: all 0.4s ease;
+}
+
+nav ul li a:hover {
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+    transition: all 0.4s ease;
+}
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #fcfcfb;
+    font-size: 28px;
+}
+
+.name {
+    font-size: 100px;
+    color: #007dc5;
+    text-align: center;
+    align-items: center;
+    padding-top: 70px;
+}
+
+.bb, .bb::before, .bb::after {
+    position: absolute;
+    bottom: 200px;
+    left: 650px;
+}
+
+.bb {
+    width: 600px;
+    height: 400px;
+    color: #027dc4;
+    box-shadow: inset 0 0 0 1px #0378bd80;
+}
+
+.bb::before, .bb::after {
+    content: '';
+    z-index: -1;
+    margin: -5%;
+    box-shadow: inset 0 0 0 2px;
+    animation: clipMe 8s linear infinite;
+}
+
+.bb::before {
+    animation-delay: -4s;
+}
+
+.bb:hover::after, .bb:hover::before {
+    background-color: rgba(10, 119, 170, 0.3);
+}
+
+@keyframes clipMe {
+    
+    0%, 100% {
+        clip: rect(0px, 220px, 2px, 0px);
+    }
+    
+   25% {
+        clip: rect(0px, 2px, 220px, 0px);
+    }
+    
+   50% {
+        clip: rect(218px, 220px, 220px, 0px);
+    }
+    
+    75% {
+        clip: rect(0px, 220px, 220px, 218px);
+   }
+
+}

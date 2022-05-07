@@ -2,9 +2,8 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ma Maison</title>
+    <meta charset="UTF-8">
+    <title>My Home</title>
     <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-database.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -23,9 +22,9 @@
             </div>
             <nav>
                 <ul id='MenuItems'>
-                    <li><a href='interface.html'>Home</a></li>
-                    <li><a href='#'>About Us</a></li>
-                    <li><a href='#'>Help</a></li>
+                    <li><a style="color:#007dc5" href='interface.html'>Home</a></li>
+                    <li><a href='about.html'>About Us</a></li>
+                    <li><a href='help.html'>Help</a></li>
                 </ul>
             </nav>
         </div>
@@ -37,7 +36,7 @@
                 <div class="progress">
                     <h4> Bathroom </h4>
                     <a class="icon1">
-                        <i class="fas fa-4x fa-bath"></i>
+                        <i class="fas fa-1x fa-bath"></i>
                     </a>
                     <div class="toggle-btn" id="unact">
                         <div class="inner-circle"></div>
@@ -47,12 +46,11 @@
                     </div>
                 </div>
             </div>
-            
             <div class="box_cuisine">
                 <div class="progress">
                     <h4> Kitchen </h4>
                     <a class="icon1">
-                        <i class="fas fa-4x fa-utensils"></i>
+                        <i class="fas fa-1x fa-utensils"></i>
                     </a>
                     <div class="toggle-btn1" id="unact1">
                         <div class="inner-circle"></div>
@@ -62,12 +60,11 @@
                     </div>
                 </div>
             </div>
-
             <div class="box_salon">
                 <div class="progress">
                     <h4> Living Room </h4>
                     <a class="icon1">
-                        <i class="fas fa-4x fa-tv"></i>
+                        <i class="fas fa-1x fa-tv"></i>
                     </a>
                     <div class="toggle-btn2" id="unact2">
                         <div class="inner-circle"></div>
@@ -81,7 +78,7 @@
                 <div class="progress">
                     <h4> Bedroom </h4>
                     <a class="icon1">
-                        <i class="fas fa-4x fa-bed"></i>
+                        <i class="fas fa-1x fa-bed"></i>
                     </a>
                     <div class="toggle-btn3" id="unact3">
                         <div class="inner-circle"></div>
@@ -90,7 +87,63 @@
                         <div class="inner-circle"></div>
                     </div>
                 </div>
-            </div>      
+            </div>
+            <div class="box_small_salon">
+                <div class="progress">
+                    <h4> Small Living Room </h4>
+                    <a class="icon1">
+                        <i class="fas fa-1x fa-bed"></i>
+                    </a>
+                    <div class="toggle-btn4" id="unact3">
+                        <div class="inner-circle"></div>
+                    </div>
+                    <div class="toggle-btn4 active" id="act3">
+                        <div class="inner-circle"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="box_enter">
+                <div class="progress">
+                    <h4> Entrance </h4>
+                    <a class="icon1">
+                        <i class="fas fa-1x fa-bed"></i>
+                    </a>
+                    <div class="toggle-btn5" id="unact3">
+                        <div class="inner-circle"></div>
+                    </div>
+                    <div class="toggle-btn5 active" id="act3">
+                        <div class="inner-circle"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="box_garage">
+                <div class="progress">
+                    <h4> Garage </h4>
+                    <a class="icon1">
+                        <i class="fas fa-1x fa-bed"></i>
+                    </a>
+                    <div class="toggle-btn6" id="unact3">
+                        <div class="inner-circle"></div>
+                    </div>
+                    <div class="toggle-btn6 active" id="act3">
+                        <div class="inner-circle"></div>
+                    </div>
+                </div>
+            </div>   
+            <div class="box_extern">
+                <div class="progress">
+                    <h4> Terrace </h4>
+                    <a class="icon1">
+                        <i class="fas fa-1x fa-bed"></i>
+                    </a>
+                    <div class="toggle-btn7" id="unact3">
+                        <div class="inner-circle"></div>
+                    </div>
+                    <div class="toggle-btn7 active" id="act3">
+                        <div class="inner-circle"></div>
+                    </div>
+                </div>
+            </div>   
         </div>
     </div>
 </body>
