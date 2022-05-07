@@ -87,3 +87,33 @@ a {
     align-items: center;
     padding-top: 70px;
 }
+
+.patterns {
+    height: 50vh;
+    padding-top: 100px;
+}
+  
+svg text {
+    font-family: Lora;
+    letter-spacing: 10px;
+    stroke: #007dc5;
+    font-size: 100px;
+    font-weight: 700;
+    stroke-width: 3;
+    animation: textAnimate 5s infinite alternate;
+}
+  
+@keyframes textAnimate {
+    0% {
+        stroke-dasharray: 0 50%;
+        stroke-dashoffset:  20%;
+        fill:hsl(189, 100%, 1%)
+
+    }
+    100% {
+        stroke-dasharray: 50% 0;
+        stroke-dashoffstet: -20%;
+        fill: hsla(189, 68%, 75%,0%)
+    }
+}
+  
