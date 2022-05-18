@@ -18,7 +18,7 @@
     <div class="full-page">
         <div class="navbar">
             <div>
-                <a href='login.html'>My Home</a>
+                <a href="login.html">My Home</a>
             </div>
             <nav>
                 <ul id='MenuItems'>
@@ -28,10 +28,12 @@
                 </ul>
             </nav>
         </div>
-        <div class="piece">
-            <a> Ground Floor </a>
+        <div class='box'>
+            <div id='btns'></div>
+            <button type='button' onclick='ground()' class='piece'>Ground floor</button>
+            <button type='button' onclick='floor()' class='piece'>Frist floor</button>
         </div>
-        <div class="wrapper">
+        <div id="ground" class="wrapper">
             <div class="box_bath">
                 <div class="progress">
                     <h4> Bathroom </h4>
@@ -160,7 +162,24 @@
                 </div>
             </div>   
         </div>
+        <div id="floor"></div>
     </div>
+    <script>
+        var x = document.getElementById('ground');
+        var y = document.getElementById('floor');
+        var z = document.getElementById('btns');
+    
+        function floor() {
+            x.style.left = '-400px';
+            y.style.left = '50px';
+            z.style.left = '110px';
+        }
+    
+        function ground() {
+            x.style.left = '50px';
+            y.style.left = '450px';
+            z.style.left = '0px';
+        }
+    </script>
 </body>
-
 </html>
