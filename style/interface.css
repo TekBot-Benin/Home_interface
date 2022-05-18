@@ -123,6 +123,17 @@ a {
     margin: 70px;
 }
 
+.buttons {
+    display: flex;
+    flex-direction:row;
+}
+
+.button1 {
+    display: flex;
+    margin-right: 10px;
+    margin-left: 10px; flex-direction: column;
+}
+
 .toggle-btn,
 .toggle-btn1,
 .toggle-btn2,
@@ -130,6 +141,7 @@ a {
 .toggle-btn4,
 .toggle-btn5,
 .toggle-btn6,
+.toggle-btn8,
 .toggle-btn7 {
     width: 40px;
     height: 20px;
@@ -145,6 +157,7 @@ a {
 .toggle-btn4>.inner-circle,
 .toggle-btn5>.inner-circle,
 .toggle-btn6>.inner-circle,
+.toggle-btn8>.inner-circle,
 .toggle-btn7>.inner-circle {
     width: 20px;
     height: 20px;
@@ -153,28 +166,15 @@ a {
     transition: all 300ms ease-in-out;
 }
 
-.toggle-btn.active {
-
-    background: white;
-    box-shadow: 0 0 10px white, 0 0 40px white, 0 0 80px white;
-    transition-delay: 0.5s;
-}
-
-.toggle-btn1.active {
-
-    background: white;
-    box-shadow: 0 0 10px white, 0 0 40px white, 0 0 80px white;
-    transition-delay: 0.5s;
-}
-
-.toggle-btn2.active {
-
-    background: white;
-    box-shadow: 0 0 10px white, 0 0 40px white, 0 0 80px white;
-    transition-delay: 0.5s;
-}
-
-.toggle-btn3.active, .toggle-btn4.active, .toggle-btn5.active, .toggle-btn6.active, .toggle-btn7.active {
+.toggle-btn.active,
+.toggle-btn1.active,
+.toggle-btn2.active,
+.toggle-btn3.active,
+.toggle-btn4.active,
+.toggle-btn5.active,
+.toggle-btn6.active,
+.toggle-btn7.active,
+.toggle-btn8.active {
     background: white;
     box-shadow: 0 0 10px white, 0 0 40px white, 0 0 80px white;
     transition-delay: 0.5s;
@@ -187,7 +187,8 @@ a {
 .toggle-btn4.active>.inner-circle,
 .toggle-btn5.active>.inner-circle,
 .toggle-btn6.active>.inner-circle,
-.toggle-btn7.active>.inner-circle {
+.toggle-btn7.active>.inner-circle,
+.toggle-btn8.active>.inner-circle {
     margin-left: 20px;
 }
 
