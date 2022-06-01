@@ -16,11 +16,21 @@ $(document).ready(function () {
 	var Led2Status;
 	var Led3Status;
 	var Led4Status;
+	var Led5Status;
+	var Led6Status;
+	var Led7Status;
+	var Led8Status;
+	var BrasseurLivingRoom;
 	database.ref().on("value", function(snap){
 		Led1Status = snap.val().Led1Status;
 		Led2Status = snap.val().Led2Status;
 		Led3Status = snap.val().Led3Status;
 		Led4Status = snap.val().Led4Status;
+		Led5Status = snap.val().Led5Status;
+		Led6Status = snap.val().Led6Status;
+		Led7Status = snap.val().Led7Status;
+		Led8Status = snap.val().Led8Status;
+		BrasseurLivingRoom = snap.val().BrasseurLivingRoom;
 		if(Led1Status == "1"){
 			document.getElementById("unact").style.display = "none";
 			document.getElementById("act").style.display = "block";
@@ -48,6 +58,41 @@ $(document).ready(function () {
 		} else {
 			document.getElementById("unact3").style.display = "block";
 			document.getElementById("act3").style.display = "none";
+		}
+		if(Led5Status == "1"){
+			document.getElementById("unact4").style.display = "none";
+			document.getElementById("act4").style.display = "block";
+		} else {
+			document.getElementById("unact4").style.display = "block";
+			document.getElementById("act4").style.display = "none";
+		}
+		if(Led6Status == "1"){
+			document.getElementById("unact5").style.display = "none";
+			document.getElementById("act5").style.display = "block";
+		} else {
+			document.getElementById("unact5").style.display = "block";
+			document.getElementById("act5").style.display = "none";
+		}
+		if(Led7Status == "1"){
+			document.getElementById("unact6").style.display = "none";
+			document.getElementById("act6").style.display = "block";
+		} else {
+			document.getElementById("unact6").style.display = "block";
+			document.getElementById("act6").style.display = "none";
+		}
+		if(Led8Status == "1"){
+			document.getElementById("unact7").style.display = "none";
+			document.getElementById("act7").style.display = "block";
+		} else {
+			document.getElementById("unact7").style.display = "block";
+			document.getElementById("act7").style.display = "none";
+		}
+		if(BrasseurLivingRoom == "1"){
+			document.getElementById("unact8").style.display = "none";
+			document.getElementById("act8").style.display = "block";
+		} else {
+			document.getElementById("unact8").style.display = "block";
+			document.getElementById("act8").style.display = "none";
 		}
 	});
 
@@ -89,6 +134,56 @@ $(document).ready(function () {
 		} else {
 			firebaseRef.set("1");
 			Led4Status = "1";
+		}
+	})
+	$(".toggle-btn4").click(function(){
+		var firebaseRef = firebase.database().ref().child("Led5Status");
+		if(Led5Status == "1"){
+			firebaseRef.set("0");
+			Led5Status = "0";
+		} else {
+			firebaseRef.set("1");
+			Led5Status = "1";
+		}
+	})
+	$(".toggle-btn5").click(function(){
+		var firebaseRef = firebase.database().ref().child("Led6Status");
+		if(Led6Status == "1"){
+			firebaseRef.set("0");
+			Led6Status = "0";
+		} else {
+			firebaseRef.set("1");
+			Led6Status = "1";
+		}
+	})
+	$(".toggle-btn6").click(function(){
+		var firebaseRef = firebase.database().ref().child("Led7Status");
+		if(Led7Status == "1"){
+			firebaseRef.set("0");
+			Led7Status = "0";
+		} else {
+			firebaseRef.set("1");
+			Led7Status = "1";
+		}
+	})
+	$(".toggle-btn7").click(function(){
+		var firebaseRef = firebase.database().ref().child("Led8Status");
+		if(Led8Status == "1"){
+			firebaseRef.set("0");
+			Led8Status = "0";
+		} else {
+			firebaseRef.set("1");
+			Led8Status = "1";
+		}
+	})
+	$(".toggle-btn8").click(function(){
+		var firebaseRef = firebase.database().ref().child("BrasseurLivingRoom");
+		if(BrasseurLivingRoom == "1"){
+			firebaseRef.set("0");
+			BrasseurLivingRoom = "0";
+		} else {
+			firebaseRef.set("1");
+			BrasseurLivingRoom = "1";
 		}
 	})
 });
