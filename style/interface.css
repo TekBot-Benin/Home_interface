@@ -111,10 +111,20 @@ a {
     transition: .5s;
 }
 
+.floor {
+    margin: 50px;
+    display: flex;
+    position: absolute;
+    flex-wrap: wrap;
+    transition: .5s;
+}
+
 .wrapper {
     margin: 50px;
     display: flex;
     flex-wrap: wrap;
+    position: absolute;
+    transition: .5s;
 }
 
 .progress {

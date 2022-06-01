@@ -162,7 +162,22 @@
                 </div>
             </div>   
         </div>
-        <div id="floor"></div>
+        <div id="floor" class="floor">
+            <div class="box_bath">
+                <div class="progress">
+                    <h4> Bathroom </h4>
+                    <a class="icon1">
+                        <i class="fas fa-1x fa-bath"></i>
+                    </a>
+                    <div class="toggle-btn" id="unact">
+                        <div class="inner-circle"></div>
+                    </div>
+                    <div class="toggle-btn active" id="act">
+                        <div class="inner-circle"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <script>
         var x = document.getElementById('ground');
@@ -170,14 +185,14 @@
         var z = document.getElementById('btns');
     
         function floor() {
-            x.style.left = '-400px';
+            x.style.left = '-3000px';
             y.style.left = '50px';
             z.style.left = '110px';
         }
-    
+
         function ground() {
             x.style.left = '50px';
-            y.style.left = '450px';
+            y.style.left = '3050px';
             z.style.left = '0px';
         }
     </script>
