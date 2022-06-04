@@ -33,7 +33,7 @@
             <button type='button' onclick='ground()' class='piece'>Ground floor</button>
             <button type='button' onclick='floor()' class='piece'>First floor</button>
         </div>
-        <div id="ground" class="wrapper">
+        <div id="ground" class="ground">
             <div class="box_bath">
                 <div class="progress">
                     <h4> Bathroom </h4>
@@ -186,13 +186,15 @@
     
         function floor() {
             x.style.left = '-3000px';
+            x.style.hidden = true;
             y.style.left = '50px';
             z.style.left = '110px';
         }
 
         function ground() {
             x.style.left = '50px';
-            y.style.left = '3050px';
+            y.style.left = '-3000px';
+            y.style.hidden = true;
             z.style.left = '0px';
         }
     </script>
