@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/V2.1.6/css/unicons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
     <script src="script.js"></script>
+    <script src="script_floor.js"></script>
     <link rel="stylesheet" type="text/css" href="../style/interface.css">
 </head>
 
@@ -33,17 +34,18 @@
             <button type='button' onclick='ground()' class='piece'>Ground floor</button>
             <button type='button' onclick='floor()' class='piece'>First floor</button>
         </div>
+        <div class="temp" id="temp">Temperature: 30°</div>
         <div id="ground" class="ground">
             <div class="box_bath">
                 <div class="progress">
                     <h4> Bathroom </h4>
                     <a class="icon1">
-                        <i class="fas fa-1x fa-bath"></i>
+                        <i class="fas fa-sink"></i>
                     </a>
-                    <div class="toggle-btn" id="unact">
+                    <div class="bathroom_0_lamp" id="bathroom_0_lampKO">
                         <div class="inner-circle"></div>
                     </div>
-                    <div class="toggle-btn active" id="act">
+                    <div class="bathroom_0_lamp active" id="bathroom_0_lampOK">
                         <div class="inner-circle"></div>
                     </div>
                 </div>
@@ -52,12 +54,12 @@
                 <div class="progress">
                     <h4> Kitchen </h4>
                     <a class="icon1">
-                        <i class="fas fa-1x fa-utensils"></i>
+                        <i class="fas fa-utensils"></i>
                     </a>
-                    <div class="toggle-btn1" id="unact1">
+                    <div class="kitchen_0_lamp" id="kitchen_0_lampKO">
                         <div class="inner-circle"></div>
                     </div>
-                    <div class="toggle-btn1 active" id="act1">
+                    <div class="kitchen_0_lamp active" id="kitchen_0_lampOK">
                         <div class="inner-circle"></div>
                     </div>
                 </div>
@@ -68,23 +70,23 @@
                     <div class="buttons">
                         <div class="button1">
                             <a class="icon1">
-                                <i class="fas fa-1x fa-tv"></i>
+                                <i class="fas fa-lightbulb"></i>
                             </a>
-                            <div class="toggle-btn2" id="unact2">
+                            <div class="livingroom_0_lamp" id="livingroom_0_lampKO">
                                 <div class="inner-circle"></div>
                             </div>
-                            <div class="toggle-btn2 active" id="act2">
+                            <div class="livingroom_0_lamp active" id="livingroom_0_lampOK">
                                 <div class="inner-circle"></div>
                             </div>
                         </div>
                         <div class="button1">
                             <a class="icon1">
-                                <i class="fas fa-1x fa-tv"></i>
+                                <i class="fas fa-fan"></i>
                             </a>
-                            <div class="toggle-btn8" id="unact8">
+                            <div class="livingroom_0_brasseur" id="livingroom_0_brasseurKO">
                                 <div class="inner-circle"></div>
                             </div>
-                            <div class="toggle-btn8 active" id="act8">
+                            <div class="livingroom_0_brasseur active" id="livingroom_0_brasseurOK">
                                 <div class="inner-circle"></div>
                             </div>
                         </div>
@@ -95,12 +97,12 @@
                 <div class="progress">
                     <h4> Bedroom </h4>
                     <a class="icon1">
-                        <i class="fas fa-1x fa-bed"></i>
+                        <i class="fas fa-bed"></i>
                     </a>
-                    <div class="toggle-btn3" id="unact3">
+                    <div class="bedroom_0_lamp" id="bedroom_0_lampKO">
                         <div class="inner-circle"></div>
                     </div>
-                    <div class="toggle-btn3 active" id="act3">
+                    <div class="bedroom_0_lamp active" id="bedroom_0_lampOK">
                         <div class="inner-circle"></div>
                     </div>
                 </div>
@@ -109,12 +111,12 @@
                 <div class="progress">
                     <h4> Small Living Room </h4>
                     <a class="icon1">
-                        <i class="fas fa-1x fa-bed"></i>
+                        <i class="fas fa-lightbulb"></i>
                     </a>
-                    <div class="toggle-btn4" id="unact4">
+                    <div class="livingroom2_0_lamp" id="bathroom_0_lampKO4">
                         <div class="inner-circle"></div>
                     </div>
-                    <div class="toggle-btn4 active" id="act4">
+                    <div class="livingroom2_0_lamp active" id="bathroom_0_lampOK4">
                         <div class="inner-circle"></div>
                     </div>
                 </div>
@@ -123,12 +125,12 @@
                 <div class="progress">
                     <h4> Entrance </h4>
                     <a class="icon1">
-                        <i class="fas fa-1x fa-bed"></i>
+                        <i class="fas fa-door-closed"></i>
                     </a>
-                    <div class="toggle-btn5" id="unact5">
+                    <div class="entrance_0_lamp" id="entrance_0_lampKO">
                         <div class="inner-circle"></div>
                     </div>
-                    <div class="toggle-btn5 active" id="act5">
+                    <div class="entrance_0_lamp active" id="entrance_0_lampOK">
                         <div class="inner-circle"></div>
                     </div>
                 </div>
@@ -137,12 +139,12 @@
                 <div class="progress">
                     <h4> Garage </h4>
                     <a class="icon1">
-                        <i class="fas fa-1x fa-bed"></i>
+                        <i class="fas fa-door-closed"></i>
                     </a>
-                    <div class="toggle-btn6" id="unact6">
+                    <div class="garage_0_door" id="garage_0_doorKO">
                         <div class="inner-circle"></div>
                     </div>
-                    <div class="toggle-btn6 active" id="act6">
+                    <div class="garage_0_door active" id="garage_0_doorOK">
                         <div class="inner-circle"></div>
                     </div>
                 </div>
@@ -151,12 +153,12 @@
                 <div class="progress">
                     <h4> Terrace and Pool </h4>
                     <a class="icon1">
-                        <i class="fas fa-1x fa-bed"></i>
+                        <i class="fas fa-water"></i>
                     </a>
-                    <div class="toggle-btn7" id="unact7">
+                    <div class="pool_0_lamp" id="pool_0_lampKO">
                         <div class="inner-circle"></div>
                     </div>
-                    <div class="toggle-btn7 active" id="act7">
+                    <div class="pool_0_lamp active" id="pool_0_lampOK">
                         <div class="inner-circle"></div>
                     </div>
                 </div>
@@ -165,14 +167,112 @@
         <div id="floor" class="floor">
             <div class="box_bath">
                 <div class="progress">
-                    <h4> Bathroom </h4>
+                    <h4> Bathroom 1 </h4>
                     <a class="icon1">
-                        <i class="fas fa-1x fa-bath"></i>
+                        <i class="fas fa-sink"></i>
                     </a>
-                    <div class="toggle-btn" id="unact">
+                    <div class="bathroom1_1_lamp" id="bathroom1_1_lampKO">
                         <div class="inner-circle"></div>
                     </div>
-                    <div class="toggle-btn active" id="act">
+                    <div class="bathroom1_1_lamp active" id="bathroom1_1_lampOK">
+                        <div class="inner-circle"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="box_bath">
+                <div class="progress">
+                    <h4> Bathroom 2</h4>
+                    <a class="icon1">
+                        <i class="fas fa-sink"></i>
+                    </a>
+                    <div class="bathroom2_1_lamp" id="bathroom2_1_lampKO">
+                        <div class="inner-circle"></div>
+                    </div>
+                    <div class="bathroom2_1_lamp active" id="bathroom2_1_lampOK">
+                        <div class="inner-circle"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="box_chambre">
+                <div class="progress">
+                    <h4> Bedroom 1 </h4>
+                    <a class="icon1">
+                        <i class="fas fa-bed"></i>
+                    </a>
+                    <div class="bedroom1_1_lamp" id="bedroom1_1_lampKO">
+                        <div class="inner-circle"></div>
+                    </div>
+                    <div class="bedroom1_1_lamp active" id="bedroom1_1_lampOK">
+                        <div class="inner-circle"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="box_chambre">
+                <div class="progress">
+                    <h4> Bedroom 2 </h4>
+                    <a class="icon1">
+                        <i class="fas fa-bed"></i>
+                    </a>
+                    <div class="bedroom2_1_lamp" id="bedroom2_1_lampKO">
+                        <div class="inner-circle"></div>
+                    </div>
+                    <div class="bedroom2_1_lamp active" id="bedroom2_1_lampOK">
+                        <div class="inner-circle"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="box_chambre">
+                <div class="progress">
+                    <h4> Bedroom 3 </h4>
+                    <a class="icon1">
+                        <i class="fas fa-bed"></i>
+                    </a>
+                    <div class="bedroom3_1_lamp" id="bedroom3_1_lampKO">
+                        <div class="inner-circle"></div>
+                    </div>
+                    <div class="bedroom3_1_lamp active" id="bedroom3_1_lampOK">
+                        <div class="inner-circle"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="box_chambre">
+                <div class="progress">
+                    <h4> Dressing </h4>
+                    <a class="icon1">
+                        <i class="fas fa-lightbulb"></i>
+                    </a>
+                    <div class="dressing_1_lamp" id="dressing_1_lampKO">
+                        <div class="inner-circle"></div>
+                    </div>
+                    <div class="dressing_1_lamp active" id="dressing_1_lampOK">
+                        <div class="inner-circle"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="box_enter">
+                <div class="progress">
+                    <h4> Corridor </h4>
+                    <a class="icon1">
+                        <i class="fas fa-lightbulb"></i>
+                    </a>
+                    <div class="corridor_1_lamp" id="corridor_1_lampKO">
+                        <div class="inner-circle"></div>
+                    </div>
+                    <div class="corridor_1_lamp active" id="corridor_1_lampOK">
+                        <div class="inner-circle"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="box_extern">
+                <div class="progress">
+                    <h4> Terrace </h4>
+                    <a class="icon1">
+                        <i class="fas fa-lightbulb"></i>
+                    </a>
+                    <div class="terrace_1_lamp" id="terrace_1_lampKO">
+                        <div class="inner-circle"></div>
+                    </div>
+                    <div class="terrace_1_lamp active" id="terrace_1_lampOK">
                         <div class="inner-circle"></div>
                     </div>
                 </div>
@@ -183,14 +283,14 @@
         var x = document.getElementById('ground');
         var y = document.getElementById('floor');
         var z = document.getElementById('btns');
-    
+        
         function floor() {
             x.style.left = '-3000px';
             x.style.hidden = true;
             y.style.left = '50px';
             z.style.left = '110px';
         }
-
+        
         function ground() {
             x.style.left = '50px';
             y.style.left = '-3000px';

@@ -12,178 +12,335 @@ firebase.initializeApp(firebaseConfig);
 
 $(document).ready(function () {
     var database = firebase.database();
-	var Led1Status;
-	var Led2Status;
-	var Led3Status;
-	var Led4Status;
-	var Led5Status;
-	var Led6Status;
-	var Led7Status;
-	var Led8Status;
-	var BrasseurLivingRoom;
+	var Led_bathroom_0;
+	var Led_kitchen_0;
+	var Led_livingroom_0;
+	var Led_bedroom_0;
+	var Led_livingroom2_0;
+	var Led_entrance_0;
+	var Door_garage_0;
+	var Led_pool_0;
+	var Brasseur_livingroom_0;
+	var Led_bathroom1_1;
+	var Led_bathroom2_1;
+	var Led_bedroom1_1;
+	var Led_bedroom2_1;
+	var Led_bedroom3_1;
+	var Led_dressing_1;
+	var Led_corridor_1;
+	var Led_terrace_1;
+	var temperature;
+
 	database.ref().on("value", function(snap){
-		Led1Status = snap.val().Led1Status;
-		Led2Status = snap.val().Led2Status;
-		Led3Status = snap.val().Led3Status;
-		Led4Status = snap.val().Led4Status;
-		Led5Status = snap.val().Led5Status;
-		Led6Status = snap.val().Led6Status;
-		Led7Status = snap.val().Led7Status;
-		Led8Status = snap.val().Led8Status;
-		BrasseurLivingRoom = snap.val().BrasseurLivingRoom;
-		if(Led1Status == "1"){
-			document.getElementById("unact").style.display = "none";
-			document.getElementById("act").style.display = "block";
+		temperature = snap.val().temperature;
+		$("temp").append(temperature);
+		$("temp").append("°");
+		Led_bathroom_0 = snap.val().Led_bathroom_0;
+		Led_kitchen_0 = snap.val().Led_kitchen_0;
+		Led_livingroom_0 = snap.val().Led_livingroom_0;
+		Led_bedroom_0 = snap.val().Led_bedroom_0;
+		Led_livingroom2_0 = snap.val().Led_livingroom2_0;
+		Led_entrance_0 = snap.val().Led_entrance_0;
+		Door_garage_0 = snap.val().Door_garage_0;
+		Led_pool_0 = snap.val().Led_pool_0;
+		Brasseur_livingroom_0 = snap.val().Brasseur_livingroom_0;
+		Led_bathroom1_1 = snap.val().Led_bathroom1_1;
+		Led_bathroom2_1 = snap.val().Led_bathroom2_1;
+		Led_bedroom1_1 = snap.val().Led_bedroom1_1;
+		Led_bedroom2_1 = snap.val().Led_bedroom2_1;
+		Led_bedroom3_1 = snap.val().Led_bedroom3_1;
+		Led_dressing_1 = snap.val().Led_dressing_1;
+		Led_corridor_1 = snap.val().Led_corridor_1;
+		Led_terrace_1 = snap.val().Led_terrace_1;
+		if(Led_bathroom_0 == "1"){
+			document.getElementById("bathroom_0_lampKO").style.display = "none";
+			document.getElementById("bathroom_0_lampOK").style.display = "block";
 		} else {
-			document.getElementById("unact").style.display = "block";
-			document.getElementById("act").style.display = "none";
+			document.getElementById("bathroom_0_lampKO").style.display = "block";
+			document.getElementById("bathroom_0_lampOK").style.display = "none";
 		}
-		if(Led2Status == "1"){
-			document.getElementById("unact1").style.display = "none";
-			document.getElementById("act1").style.display = "block";
+		if(Led_kitchen_0 == "1"){
+			document.getElementById("kitchen_0_lampKO").style.display = "none";
+			document.getElementById("kitchen_0_lampOK").style.display = "block";
 		} else {
-			document.getElementById("unact1").style.display = "block";
-			document.getElementById("act1").style.display = "none";
+			document.getElementById("kitchen_0_lampKO").style.display = "block";
+			document.getElementById("kitchen_0_lampOK").style.display = "none";
 		}
-		if(Led3Status == "1"){
-			document.getElementById("unact2").style.display = "none";
-			document.getElementById("act2").style.display = "block";
+		if(Led_livingroom_0 == "1"){
+			document.getElementById("livingroom_0_lampKO").style.display = "none";
+			document.getElementById("livingroom_0_lampOK").style.display = "block";
 		} else {
-			document.getElementById("unact2").style.display = "block";
-			document.getElementById("act2").style.display = "none";
+			document.getElementById("livingroom_0_lampKO").style.display = "block";
+			document.getElementById("livingroom_0_lampOK").style.display = "none";
 		}
-		if(Led4Status == "1"){
-			document.getElementById("unact3").style.display = "none";
-			document.getElementById("act3").style.display = "block";
+		if(Led_bedroom_0 == "1"){
+			document.getElementById("bedroom_0_lampKO").style.display = "none";
+			document.getElementById("bedroom_0_lampOK").style.display = "block";
 		} else {
-			document.getElementById("unact3").style.display = "block";
-			document.getElementById("act3").style.display = "none";
+			document.getElementById("bedroom_0_lampKO").style.display = "block";
+			document.getElementById("bedroom_0_lampOK").style.display = "none";
 		}
-		if(Led5Status == "1"){
-			document.getElementById("unact4").style.display = "none";
-			document.getElementById("act4").style.display = "block";
+		if(Led_livingroom2_0 == "1"){
+			document.getElementById("bathroom_0_lampKO4").style.display = "none";
+			document.getElementById("bathroom_0_lampOK4").style.display = "block";
 		} else {
-			document.getElementById("unact4").style.display = "block";
-			document.getElementById("act4").style.display = "none";
+			document.getElementById("bathroom_0_lampKO4").style.display = "block";
+			document.getElementById("bathroom_0_lampOK4").style.display = "none";
 		}
-		if(Led6Status == "1"){
-			document.getElementById("unact5").style.display = "none";
-			document.getElementById("act5").style.display = "block";
+		if(Led_entrance_0 == "1"){
+			document.getElementById("entrance_0_lampKO").style.display = "none";
+			document.getElementById("entrance_0_lampOK").style.display = "block";
 		} else {
-			document.getElementById("unact5").style.display = "block";
-			document.getElementById("act5").style.display = "none";
+			document.getElementById("entrance_0_lampKO").style.display = "block";
+			document.getElementById("entrance_0_lampOK").style.display = "none";
 		}
-		if(Led7Status == "1"){
-			document.getElementById("unact6").style.display = "none";
-			document.getElementById("act6").style.display = "block";
+		if(Door_garage_0 == "1"){
+			document.getElementById("garage_0_doorKO").style.display = "none";
+			document.getElementById("garage_0_doorOK").style.display = "block";
 		} else {
-			document.getElementById("unact6").style.display = "block";
-			document.getElementById("act6").style.display = "none";
+			document.getElementById("garage_0_doorKO").style.display = "block";
+			document.getElementById("garage_0_doorOK").style.display = "none";
 		}
-		if(Led8Status == "1"){
-			document.getElementById("unact7").style.display = "none";
-			document.getElementById("act7").style.display = "block";
+		if(Led_pool_0 == "1"){
+			document.getElementById("pool_0_lampKO").style.display = "none";
+			document.getElementById("pool_0_lampOK").style.display = "block";
 		} else {
-			document.getElementById("unact7").style.display = "block";
-			document.getElementById("act7").style.display = "none";
+			document.getElementById("pool_0_lampKO").style.display = "block";
+			document.getElementById("pool_0_lampOK").style.display = "none";
 		}
-		if(BrasseurLivingRoom == "1"){
-			document.getElementById("unact8").style.display = "none";
-			document.getElementById("act8").style.display = "block";
+		if(Brasseur_livingroom_0 == "1"){
+			document.getElementById("livingroom_0_brasseurKO").style.display = "none";
+			document.getElementById("livingroom_0_brasseurOK").style.display = "block";
 		} else {
-			document.getElementById("unact8").style.display = "block";
-			document.getElementById("act8").style.display = "none";
+			document.getElementById("livingroom_0_brasseurKO").style.display = "block";
+			document.getElementById("livingroom_0_brasseurOK").style.display = "none";
+		}
+        if(Led_bathroom1_1 == "1"){
+			document.getElementById("bathroom1_1_lampKO").style.display = "none";
+			document.getElementById("bathroom1_1_lampOK").style.display = "block";
+		} else {
+			document.getElementById("bathroom1_1_lampKO").style.display = "block";
+			document.getElementById("bathroom1_1_lampOK").style.display = "none";
+		}
+        if(Led_bathroom2_1 == "1"){
+			document.getElementById("bathroom2_1_lampKO").style.display = "none";
+			document.getElementById("bathroom2_1_lampOK").style.display = "block";
+		} else {
+			document.getElementById("bathroom2_1_lampKO").style.display = "block";
+			document.getElementById("bathroom2_1_lampOK").style.display = "none";
+		}
+        if(Led_bedroom1_1 == "1"){
+			document.getElementById("bedroom1_1_lampKO").style.display = "none";
+			document.getElementById("bedroom1_1_lampOK").style.display = "block";
+		} else {
+			document.getElementById("bedroom1_1_lampKO").style.display = "block";
+			document.getElementById("bedroom1_1_lampOK").style.display = "none";
+		}
+        if(Led_bedroom2_1 == "1"){
+			document.getElementById("bedroom2_1_lampKO").style.display = "none";
+			document.getElementById("bedroom2_1_lampOK").style.display = "block";
+		} else {
+			document.getElementById("bedroom2_1_lampKO").style.display = "block";
+			document.getElementById("bedroom2_1_lampOK").style.display = "none";
+		}
+        if(Led_bedroom3_1 == "1"){
+			document.getElementById("bedroom3_1_lampKO").style.display = "none";
+			document.getElementById("bedroom3_1_lampOK").style.display = "block";
+		} else {
+			document.getElementById("bedroom3_1_lampKO").style.display = "block";
+			document.getElementById("bedroom3_1_lampOK").style.display = "none";
+		}
+        if(Led_dressing_1 == "1"){
+			document.getElementById("dressing_1_lampKO").style.display = "none";
+			document.getElementById("dressing_1_lampOK").style.display = "block";
+		} else {
+			document.getElementById("dressing_1_lampKO").style.display = "block";
+			document.getElementById("dressing_1_lampOK").style.display = "none";
+		}
+        if(Led_corridor_1 == "1"){
+			document.getElementById("corridor_1_lampKO").style.display = "none";
+			document.getElementById("corridor_1_lampOK").style.display = "block";
+		} else {
+			document.getElementById("corridor_1_lampKO").style.display = "block";
+			document.getElementById("corridor_1_lampOK").style.display = "none";
+		}
+        if(Led_terrace_1 == "1"){
+			document.getElementById("terrace_1_lampKO").style.display = "none";
+			document.getElementById("terrace_1_lampOK").style.display = "block";
+		} else {
+			document.getElementById("terrace_1_lampKO").style.display = "block";
+			document.getElementById("terrace_1_lampOK").style.display = "none";
 		}
 	});
 
-	$(".toggle-btn").click(function(){
-		var firebaseRef = firebase.database().ref().child("Led1Status");
-		if(Led1Status == "1"){
+	$(".bathroom_0_lamp").click(function() {
+		var firebaseRef = firebase.database().ref().child("Led_bathroom_0");
+		if(Led_bathroom_0 == "1"){
 			firebaseRef.set("0");
-			Led1Status = "0";
+			Led_bathroom_0 = "0";
 		} else {
 			firebaseRef.set("1");
-			Led1Status = "1";
+			Led_bathroom_0 = "1";
 		}
 	})
-	$(".toggle-btn1").click(function(){
-		var firebaseRef = firebase.database().ref().child("Led2Status");
-		if(Led2Status == "1"){
+	$(".kitchen_0_lamp").click(function(){
+		var firebaseRef = firebase.database().ref().child("Led_kitchen_0");
+		if(Led_kitchen_0 == "1"){
 			firebaseRef.set("0");
-			Led2Status = "0";
+			Led_kitchen_0 = "0";
 		} else {
 			firebaseRef.set("1");
-			Led2Status = "1";
+			Led_kitchen_0 = "1";
 		}
 	})
-	$(".toggle-btn2").click(function(){
-		var firebaseRef = firebase.database().ref().child("Led3Status");
-		if(Led3Status == "1"){
+	$(".livingroom_0_lamp").click(function(){
+		var firebaseRef = firebase.database().ref().child("Led_livingroom_0");
+		if(Led_livingroom_0 == "1"){
 			firebaseRef.set("0");
-			Led3Status = "0";
+			Led_livingroom_0 = "0";
 		} else {
 			firebaseRef.set("1");
-			Led3Status = "1";
+			Led_livingroom_0 = "1";
 		}
 	})
-	$(".toggle-btn3").click(function(){
-		var firebaseRef = firebase.database().ref().child("Led4Status");
-		if(Led4Status == "1"){
+	$(".bedroom_0_lamp").click(function(){
+		var firebaseRef = firebase.database().ref().child("Led_bedroom_0");
+		if(Led_bedroom_0 == "1"){
 			firebaseRef.set("0");
-			Led4Status = "0";
+			Led_bedroom_0 = "0";
 		} else {
 			firebaseRef.set("1");
-			Led4Status = "1";
+			Led_bedroom_0 = "1";
 		}
 	})
-	$(".toggle-btn4").click(function(){
-		var firebaseRef = firebase.database().ref().child("Led5Status");
-		if(Led5Status == "1"){
+	$(".livingroom2_0_lamp").click(function(){
+		var firebaseRef = firebase.database().ref().child("Led_livingroom2_0");
+		if(Led_livingroom2_0 == "1"){
 			firebaseRef.set("0");
-			Led5Status = "0";
+			Led_livingroom2_0 = "0";
 		} else {
 			firebaseRef.set("1");
-			Led5Status = "1";
+			Led_livingroom2_0 = "1";
 		}
 	})
-	$(".toggle-btn5").click(function(){
-		var firebaseRef = firebase.database().ref().child("Led6Status");
-		if(Led6Status == "1"){
+	$(".entrance_0_lamp").click(function(){
+		var firebaseRef = firebase.database().ref().child("Led_entrance_0");
+		if(Led_entrance_0 == "1"){
 			firebaseRef.set("0");
-			Led6Status = "0";
+			Led_entrance_0 = "0";
 		} else {
 			firebaseRef.set("1");
-			Led6Status = "1";
+			Led_entrance_0 = "1";
 		}
 	})
-	$(".toggle-btn6").click(function(){
-		var firebaseRef = firebase.database().ref().child("Led7Status");
-		if(Led7Status == "1"){
+	$(".garage_0_door").click(function(){
+		var firebaseRef = firebase.database().ref().child("Door_garage_0");
+		if(Door_garage_0 == "1"){
 			firebaseRef.set("0");
-			Led7Status = "0";
+			Door_garage_0 = "0";
 		} else {
 			firebaseRef.set("1");
-			Led7Status = "1";
+			Door_garage_0 = "1";
 		}
 	})
-	$(".toggle-btn7").click(function(){
-		var firebaseRef = firebase.database().ref().child("Led8Status");
-		if(Led8Status == "1"){
+	$(".pool_0_lamp").click(function(){
+		var firebaseRef = firebase.database().ref().child("Led_pool_0");
+		if(Led_pool_0 == "1"){
 			firebaseRef.set("0");
-			Led8Status = "0";
+			Led_pool_0 = "0";
 		} else {
 			firebaseRef.set("1");
-			Led8Status = "1";
+			Led_pool_0 = "1";
 		}
 	})
-	$(".toggle-btn8").click(function(){
-		var firebaseRef = firebase.database().ref().child("BrasseurLivingRoom");
-		if(BrasseurLivingRoom == "1"){
+	$(".livingroom_0_brasseur").click(function(){
+		var firebaseRef = firebase.database().ref().child("Brasseur_livingroom_0");
+		if(Brasseur_livingroom_0 == "1"){
 			firebaseRef.set("0");
-			BrasseurLivingRoom = "0";
+			Brasseur_livingroom_0 = "0";
 		} else {
 			firebaseRef.set("1");
-			BrasseurLivingRoom = "1";
+			Brasseur_livingroom_0 = "1";
+		}
+	})
+	$(".bathroom1_1_lamp").click(function() {
+		var firebaseRef = firebase.database().ref().child("Led_bathroom1_1");
+		if(Led_bathroom1_1 == "1"){
+			firebaseRef.set("0");
+			Led_bathroom1_1 = "0";
+		} else {
+			firebaseRef.set("1");
+			Led_bathroom1_1 = "1";
+		}
+	})
+	$(".bathroom2_1_lamp").click(function() {
+		var firebaseRef = firebase.database().ref().child("Led_bathroom2_1");
+		if(Led_bathroom2_1 == "1"){
+			firebaseRef.set("0");
+			Led_bathroom2_1 = "0";
+		} else {
+			firebaseRef.set("1");
+			Led_bathroom2_1 = "1";
+		}
+	})
+	$(".bedroom1_1_lamp").click(function() {
+		var firebaseRef = firebase.database().ref().child("Led_bedroom1_1");
+		if(Led_bedroom1_1 == "1"){
+			firebaseRef.set("0");
+			Led_bedroom1_1 = "0";
+		} else {
+			firebaseRef.set("1");
+			Led_bedroom1_1 = "1";
+		}
+	})
+	$(".bedroom2_1_lamp").click(function() {
+		var firebaseRef = firebase.database().ref().child("Led_bedroom2_1");
+		if(Led_bedroom2_1 == "1"){
+			firebaseRef.set("0");
+			Led_bedroom2_1 = "0";
+		} else {
+			firebaseRef.set("1");
+			Led_bedroom2_1 = "1";
+		}
+	})
+	$(".bedroom3_1_lamp").click(function() {
+		var firebaseRef = firebase.database().ref().child("Led_bedroom3_1");
+		if(Led_bedroom3_1 == "1"){
+			firebaseRef.set("0");
+			Led_bedroom3_1 = "0";
+		} else {
+			firebaseRef.set("1");
+			Led_bedroom3_1 = "1";
+		}
+	})
+	$(".dressing_1_lamp").click(function() {
+		var firebaseRef = firebase.database().ref().child("Led_dressing_1");
+		if(Led_dressing_1 == "1"){
+			firebaseRef.set("0");
+			Led_dressing_1 = "0";
+		} else {
+			firebaseRef.set("1");
+			Led_dressing_1 = "1";
+		}
+	})
+	$(".corridor_1_lamp").click(function() {
+		var firebaseRef = firebase.database().ref().child("Led_corridor_1");
+		if(Led_corridor_1 == "1"){
+			firebaseRef.set("0");
+			Led_corridor_1 = "0";
+		} else {
+			firebaseRef.set("1");
+			Led_corridor_1 = "1";
+		}
+	})
+	$(".terrace_1_lamp").click(function() {
+		var firebaseRef = firebase.database().ref().child("Led_terrace_1");
+		if(Led_terrace_1 == "1"){
+			firebaseRef.set("0");
+			Led_terrace_1 = "0";
+		} else {
+			firebaseRef.set("1");
+			Led_terrace_1 = "1";
 		}
 	})
 });
